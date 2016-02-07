@@ -29,22 +29,21 @@
 		}
 	});
 
-		var prodColor = $('[name="product_color"]');
+var prodColor = $('[name="product_color"]');
 
 		prodColor.on('change', function(){
 			console.log($(this).val());
 			if($(this).val()=='black'){
-				$('.headphones-black').css('display', 'block');
+				$('.headphones-black').fadeIn('slow');
 				$('.headphones-grey').css('display', 'none');
 			}
 			else {
 				if($(this).val()=='grey'){
 					$('.headphones-black').css('display', 'none');
-					$('.headphones-grey').css('display', 'block');
+					$('.headphones-grey').fadeIn('slow');
 				}
 			}
 		});
-
 
 	});
 })(jQuery);
